@@ -113,6 +113,3 @@ src/eval/grounding.test.ts    # 5 behavioral evals
 logs to a real sink with alerting on strip events, add input size/abuse limits
 and an output content check, and move the dataset behind a versioned store so it
 can be updated without a redeploy.
-
-**AI coding tools used:** Claude Code (Anthropic) for design, implementation, and
-test scaffolding.
