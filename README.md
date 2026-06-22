@@ -107,20 +107,6 @@ src/eval/grounding.test.ts    # 5 behavioral evals
 
 ---
 
-## Voice version (written answer)
-
-For a phone-based voice version of this same assistant I'd use **LiveKit Agents**
-as the realtime orchestration layer (WebRTC media + turn-taking) with a
-**Deepgram** STT → our existing AI-SDK reasoning/tool layer → **Cartesia** (or
-ElevenLabs) TTS pipeline, fronted by a SIP gateway (LiveKit SIP / Twilio
-Elastic SIP Trunking) for the actual PSTN phone number. The grounding stays
-exactly where it is — same tools, same approved-set validation — because voice
-only changes the I/O modality, not the data contract; keeping STT/LLM/TTS as
-swappable components (rather than a single closed stack) lets us tune latency and
-keep the same server-side guardrails that prevent the model from drifting off the
-dataset. I'd add barge-in and short, confirm-by-readback prompts so the caller
-can verify a listing name before acting on it.
-
 ## Production hardening & tools used
 
 **Would harden:** auth + per-user rate limiting on `/api/chat`, ship guardrail
