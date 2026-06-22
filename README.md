@@ -40,7 +40,7 @@ cp .env.example .env.local      # then add your own OPENAI_API_KEY
 
 ```
 OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-4o-mini        # optional; this is the default
+OPENAI_MODEL=gpt-5.4-mini        # optional; this is the default
 ```
 
 ## Run
