@@ -1,0 +1,32 @@
+{
+  "name": "grounded-listings-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A chat assistant that recommends strictly from a fixed listings dataset and refuses to drift.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "vitest run src/lib",
+    "eval": "vitest run src/eval"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "3.0.73",
+    "@ai-sdk/react": "3.0.210",
+    "ai": "6.0.208",
+    "next": "16.2.9",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.18.0",
+    "eslint-config-next": "16.2.9",
+    "typescript": "5.7.3",
+    "vitest": "4.1.9"
+  }
+}
